@@ -1,0 +1,23 @@
+## All comments should be placed with "##" at the beginning and do avoid commenting at middle of a line
+applicationId=com.release.muvisdk
+
+##Store Name - MobPlay Mobile Store
+##authToken=05292b643417895b82f6f82e207e5c82
+##baseUrl_Prod=https://mobilemobplay.muvi.com/rest/
+
+##Store Name - Test For DRM Store (Edocent)
+##authToken=ee699b3b7836114d8f27094aab624bec
+##baseUrl_Prod=https://muvi2.edocent.com/rest/
+
+##App Info
+versionCode=43
+versionName=15.1.0
+appName=Sapphire
+##variantType=Staging
+variantType=Prod
+## Below files cannot be null, set default value instead
+storeFile=MuviReleaseCertificate.jks
+storePassword= muvi123
+keyAlias= muvi
+##faa776340cd811f01931c8feafd423dad2fbdd15
+keyPassword= muvi123

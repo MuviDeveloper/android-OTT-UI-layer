@@ -1,0 +1,6 @@
+query getContentDetails($permalink: String) {
+    filmsdetails(permalink: permalink){
+        name
+        id
+    }
+}

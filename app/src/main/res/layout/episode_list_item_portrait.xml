@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:elevation="12dp"
+    android:innerRadius="0dp"
+    app:cardCornerRadius="5dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/episode_background_color">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/thumb_portrait_width"
+                    android:layout_height="@dimen/thumb_portrait_hight"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/episodeImageView"
+                        android:layout_width="@dimen/thumb_portrait_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/no_image_bg_color" />
+
+                    <ImageView
+                        android:id="@+id/movieImageOverlay"
+                        android:layout_width="@dimen/thumb_portrait_width"
+                        android:layout_height="@dimen/thumb_portrait_hight"
+                        android:background="@drawable/episode_list_overlay"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/playButton"
+                        android:layout_width="@dimen/playimg_width"
+                        android:layout_height="@dimen/playimg_height"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_play_circle_solid" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/parent_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ppv_margin"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/parent_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="@color/episodetextcolor"
+                            android:textSize="@dimen/episodename_text_size" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/episodeDetailsLinearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/episodeNameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/ppv_margin"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/episodetextcolor"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/testview1_text_size"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:weightSum="1">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6">
+
+                                <TextView
+                                    android:id="@+id/episodeTitleTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|start"
+                                    android:layout_marginStart="@dimen/ppv_margin"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical|start"
+                                    android:maxLines="3"
+                                    android:text=""
+                                    android:textColor="@color/episodetextcolor"
+                                    android:textDirection="locale"
+                                    android:textSize="@dimen/episodename_text_size"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/download"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.2"
+                                android:visibility="invisible">
+
+                                <ProgressBar
+                                    android:id="@+id/multipart_download_progressBar"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="@dimen/progressbar_width"
+                                    android:layout_height="@dimen/progressbar_height"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    android:indeterminate="false"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/style_circular"
+                                    android:secondaryProgress="100"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/progressbar_width"
+                                    android:layout_height="@dimen/progressbar_height"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="@dimen/margintop8dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/multipart_download_img"
+                                        android:layout_width="@dimen/downloadimg_width"
+                                        android:layout_height="@dimen/downloadimg_height"
+                                        android:src="@drawable/download_black"
+                                        android:tint="@color/white"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/multipart_percentageText"
+                                        android:layout_width="@dimen/downloadimg_width"
+                                        android:layout_height="@dimen/downloadimg_height"
+                                        android:gravity="center"
+                                        android:padding="2dp"
+                                        android:text="0%"
+                                        android:textColor="@color/percentage_text_color"
+                                        android:textSize="@dimen/percentage_text_size"
+                                        android:visibility="gone" />
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/list_option_menu"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="5dp"
+                                android:layout_toEndOf="@+id/download"
+                                android:layout_weight="0.2"
+                                android:padding="10dp"
+                                android:src="@drawable/optionmanu"
+                                android:tint="@color/text_color"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/episodeDateTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/ppv_margin"
+                            android:layout_marginTop="@dimen/textColor_margin"
+                            android:textColor="@color/episodetextcolor"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/episodedate_text_size"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

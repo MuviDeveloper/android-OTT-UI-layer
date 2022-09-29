@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/app_background"
+    tools:context=".ui.activity.SettingsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/stream_settings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_section_height"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/margin_ten_dp">
+                <TextView
+                    android:id="@+id/stream"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stream"
+                    android:textDirection="locale"
+                    android:textColor="@color/settings_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    />
+                <TextView
+                    android:id="@+id/manage_stream_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textDirection="locale"
+                    android:text="Manage Streaming Settings"
+                    android:textColor="@color/settings_manange_text_color"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/settings_divider"
+                android:layout_marginStart="@dimen/marginleft10dp"
+                android:layout_marginEnd="@dimen/marginright10dp"/>
+
+
+
+            <View
+                android:id="@+id/lineUnderClearWatchHistory"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/settings_divider"
+                android:layout_marginStart="@dimen/marginleft10dp"
+                android:layout_marginEnd="@dimen/marginright10dp"/>
+
+            <LinearLayout
+                android:id="@+id/profile_edit_settings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_section_height"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/margin_ten_dp">
+                <TextView
+                    android:id="@+id/profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textDirection="locale"
+                    android:textColor="@color/settings_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    />
+                <TextView
+                    android:id="@+id/edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:textDirection="locale"
+                    android:textColor="@color/settings_manange_text_color"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/lineUnderProfile"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/settings_divider"
+                android:layout_marginStart="@dimen/marginleft10dp"
+                android:layout_marginEnd="@dimen/marginright10dp"/>
+
+            <LinearLayout
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_section_height"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/margin_ten_dp">
+                <TextView
+                    android:id="@+id/logged_in_as"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Signed in as Preeti"
+                    android:textDirection="locale"
+                    android:textColor="@color/settings_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    />
+                <TextView
+                    android:id="@+id/login_diff_acc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textDirection="locale"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="Sign in with a different account"
+                    android:textColor="@color/settings_manange_text_color"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/lineUnderSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/settings_divider"
+                android:layout_marginStart="@dimen/marginleft10dp"
+                android:layout_marginEnd="@dimen/marginright10dp"/>
+
+            <LinearLayout
+                android:id="@+id/language_settings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_section_height"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/margin_ten_dp">
+                <TextView
+                    android:id="@+id/language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Language"
+                    android:textDirection="locale"
+                    android:textColor="@color/settings_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    />
+                <TextView
+                    android:id="@+id/selected_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:textDirection="locale"
+                    android:textColor="@color/settings_manange_text_color"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/settings_divider"
+                android:layout_marginStart="@dimen/marginleft10dp"
+                android:id="@+id/lang_view"
+                android:layout_marginEnd="@dimen/marginright10dp"/>
+            <LinearLayout
+                android:id="@+id/about_us"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_section_height"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/margin_ten_dp">
+                <TextView
+                    android:id="@+id/txtAboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About Us"
+                    android:textDirection="locale"
+                    android:textColor="@color/settings_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    />
+                <!-- <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text=""/>-->
+            </LinearLayout>
+            <View
+                android:id="@+id/terms_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/settings_divider"
+                android:layout_marginStart="@dimen/marginleft10dp"
+                android:layout_marginEnd="@dimen/marginright10dp"/>
+            <LinearLayout
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_section_height"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/margin_ten_dp">
+                <TextView
+                    android:id="@+id/txtTermsAndPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Terms &amp; Policy"
+                    android:textDirection="locale"
+                    android:textColor="@color/settings_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    />
+
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_ten_dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

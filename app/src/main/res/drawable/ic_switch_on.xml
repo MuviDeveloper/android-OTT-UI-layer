@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="180"
+    android:toDegrees="0"
+    android:drawable="@drawable/ic_switch_icon">
+</rotate>-->
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="50dp"
+            android:height="50dp"
+            android:viewportWidth="64"
+            android:viewportHeight="64">
+
+            <path
+                android:fillColor="#0cb9f2"
+                android:pathData="M47,15H17C7.626,15,0,22.626,0,32s7.626,17,17,17h30c9.374,0,17-7.626,17-17S56.374,15,47,15z M47,47H17 C8.729,47,2,40.271,2,32s6.729-15,15-15h30c8.271,0,15,6.729,15,15S55.271,47,47,47z" />
+            <path
+                android:fillColor="#0cb9f2"
+                android:pathData="M47,19c-7.168,0-13,5.832-13,13s5.832,13,13,13s13-5.832,13-13S54.168,19,47,19z M47,43c-6.065,0-11-4.935-11-11 s4.935-11,11-11s11,4.935,11,11S53.065,43,47,43z" />
+        </vector>

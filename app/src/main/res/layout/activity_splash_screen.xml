@@ -1,0 +1,179 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor"
+    android:orientation="vertical">
+
+
+
+    <ImageView
+        android:id="@+id/splash_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/videolayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/videoView"/>
+
+    </LinearLayout>
+
+
+
+
+    <!--  -->
+    <RelativeLayout
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:padding="@dimen/main_padding"
+        android:visibility="gone"
+        android:layout_margin="@dimen/no_internet_margin"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/noData">
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/noInternet_image"
+                android:layout_width="@dimen/no_internet_image_width"
+                android:layout_height="@dimen/no_internet_image_height"
+                android:src="@drawable/nointernet"
+                android:layout_above="@id/oopsTextView"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:tint="@color/no_internet_image_color"
+                tools:ignore="UseAppTint" />
+
+            <!--android:textColor="@color/colorPrimary"-->
+            <TextView
+                android:id="@+id/oopsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:maxLines="4"
+                android:singleLine="false"
+                android:textColor="@color/oops_text_color"
+                android:textSize="@dimen/text_size_oops"
+                android:layout_marginBottom="5dp"
+                android:textStyle="normal"
+                android:layout_above="@id/noInternetTextView"
+                android:text="Oops!"
+                />
+
+            <!--android:textSize="@dimen/testview_text_size"-->
+            <TextView
+                android:id="@+id/noInternetTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="4"
+                android:singleLine="false"
+                android:textColor="@color/no_internet_text_color"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                />
+
+            <!--android:textColor="@color/colorPrimary"-->
+            <Button
+                android:id="@+id/tryAgainButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg_transparent"
+                android:text="Try Again !"
+                android:textAllCaps="false"
+                android:textColor="@color/btn_retry_text_color"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+<!--
+    -->
+    <RelativeLayout
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/transparent"
+        android:padding="@dimen/main_padding"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/geoBlocked">
+
+        <!--android:textSize="@dimen/testview_text_size"-->
+        <TextView
+            android:id="@+id/noDataTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/no_internet_text_color"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+<!--
+    -->
+    <RelativeLayout
+        android:id="@+id/geoBlocked"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerVertical="true"
+        android:background="@drawable/app_background"
+        android:padding="@dimen/manage_device_padding">
+
+        <ImageView
+            android:id="@+id/geoBlockedImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/geoBlockedTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/geoBlockedImageView"
+            android:layout_marginTop="@dimen/my_download_margin"
+            android:gravity="center"
+            android:maxLines="4"
+            android:paddingTop="@dimen/login_new_user_padding"
+            android:singleLine="false"
+            android:textColor="@color/no_internet_text_color"
+            android:textSize="@dimen/testview_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>

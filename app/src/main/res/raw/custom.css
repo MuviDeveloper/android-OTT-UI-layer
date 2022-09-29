@@ -1,0 +1,13 @@
+
+.button>a.touchable, .btn, .touch ._5c9u, ._2l5v, ._52x1, ._tn0, ._52ja, ._5lm6 {
+       background: #0cb9f2;
+       color:  #ffffff;
+       border-color:  #0cb9f2
+}
+.button:hover{
+background-color: #0cb9f2;
+}
+
+.button:focus{
+background-color: #0cb9f2;
+}

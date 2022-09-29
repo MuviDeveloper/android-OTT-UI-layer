@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RadioButton
+        android:id="@+id/query_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:button="@drawable/selector_check"
+        android:paddingLeft="8dp"
+        android:paddingTop="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_16sdp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_15sdp" />
+    <View
+        android:layout_width="match_parent"
+        android:background="#636567"
+        android:layout_height="0.1dp"/>
+
+</LinearLayout>

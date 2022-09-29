@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/or_layout"
+    android:visibility="gone"
+    android:layout_marginTop="25dp"
+    android:gravity="center">
+
+    <View
+        android:layout_width="@dimen/or_view_width"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/or_color">
+    </View>
+
+    <TextView
+        android:id="@+id/or_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:gravity="center"
+        android:textColor="@color/or_color" />
+
+    <View
+        android:layout_width="@dimen/or_view_width"
+        android:layout_height="1dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/or_color">
+
+    </View>
+
+
+</LinearLayout>

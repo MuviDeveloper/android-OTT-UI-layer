@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/languagePopupColor"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/languagePopupBackgroundColor"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ppv_margin"
+                android:paddingLeft="@dimen/Login_drawing_padding"
+                android:paddingRight="@dimen/Login_drawing_padding">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/subtitle_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/viewmore_btn_height"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_radious"
+                    android:stateListAnimator="@null"
+                    android:textAllCaps="false"
+                    android:text="Cancel"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/applybtn_text_size"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/apply_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/viewmore_btn_height"
+                    android:layout_gravity="center"
+                    android:text="Apply"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_radious"
+                    android:gravity="center_horizontal|center"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/applybtn_text_size"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lineTextView_height"
+            android:background="@color/colorPrimary" />
+    </LinearLayout>
+</LinearLayout>

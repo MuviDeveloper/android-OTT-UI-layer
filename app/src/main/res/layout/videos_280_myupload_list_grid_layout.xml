@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="3"
+    android:layout_marginTop="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="@dimen/content_img280_width"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/marginright5dp">
+            <ImageView
+                android:id="@+id/myUploadImage"
+                android:layout_width="@dimen/content_img280_width"
+                android:layout_height="@dimen/content_img280_height"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:background="@color/no_image_bg_color" />
+
+            <ImageView
+                android:id="@+id/movieImageOverlay"
+                android:layout_width="@dimen/content_img280_width"
+                android:layout_height="@dimen/content_img280_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                android:background="@drawable/content_list_vertical_overlay"
+                />
+            <RelativeLayout
+                android:layout_width="@dimen/content_img280_width"
+                android:layout_height="@dimen/content_img280_height"
+                android:visibility="gone"
+                android:id="@+id/pending_layout"
+                android:background="#60ffffff">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pending_tv"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@color/pending_text_color"
+                    android:layout_centerInParent="true"
+                    android:text="ddsgdffd"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/content_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_below="@+id/myUploadImage"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/my_uploads_text_color"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/action_top_margin"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/paddingtop5dp">
+                <ImageView
+                    android:id="@+id/editImageView"
+                    android:layout_width="@dimen/action_edit_icon_size"
+                    android:layout_height="@dimen/action_edit_icon_size"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/my_uploads_fragment_category_item_ImageView_color"
+                    android:src="@drawable/category_item_edit"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/editImageView"
+                    android:text="Edit"
+                    android:id="@+id/action_edit"
+                    android:layout_marginStart="@dimen/action_left_margin"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/my_uploads_text_color"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/paddingtop5dp"
+
+                >
+                <ImageView
+                    android:id="@+id/shareImageView"
+                    android:layout_width="@dimen/action_share_icon_size"
+                    android:layout_height="@dimen/action_share_icon_size"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/my_uploads_fragment_category_item_ImageView_color"
+                    android:src="@drawable/category_item_share"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/shareImageView"
+                    android:text="Share"
+                    android:layout_marginStart="@dimen/action_left_margin"
+                    android:textSize="@dimen/text_size_small"
+                    android:id="@+id/action_share"
+                    android:textColor="@color/my_uploads_text_color"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/change_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/paddingtop5dp">
+                <ImageView
+                    android:id="@+id/changeVideoImageView"
+                    android:layout_width="@dimen/action_icon_size"
+                    android:layout_height="@dimen/action_icon_size"
+                    android:layout_centerVertical="true"
+
+                    android:tint="@color/my_uploads_fragment_category_item_ImageView_color"
+                    android:src="@drawable/category_item_change_video"/>
+
+                <TextView
+                    android:id="@+id/action_change_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/action_left_margin"
+                    android:layout_toRightOf="@+id/changeVideoImageView"
+                    android:singleLine="true"
+                    android:text="Change Video"
+                    android:textColor="@color/my_uploads_text_color"
+                    android:textSize="@dimen/text_size_small" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_newplaylist"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp" >
+
+    <TextView
+        android:id="@+id/dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:text=""
+        android:textDirection="locale"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="40dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c7c6c6"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/userfield_vg"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="24dp"
+        android:background="@drawable/shape_editttext">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/playlist_row" />
+
+        <EditText
+            android:id="@+id/editTextDialogUserInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:hint=""
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textDirection="locale"
+            android:paddingStart="18dp"
+            android:paddingEnd="10dp"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/hint_color">
+            <requestFocus />
+
+        </EditText>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:text="Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentEnd="true"
+            android:foreground="?selectableItemBackground"
+            android:background="@drawable/custom_button"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/buttonTextColor" />
+        <Button
+            android:id="@+id/saveButton"
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_toStartOf="@id/cancelButton"
+            android:foreground="?selectableItemBackground"
+            android:background="@drawable/custom_button"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/buttonTextColor" />
+
+    </RelativeLayout>
+
+</LinearLayout>

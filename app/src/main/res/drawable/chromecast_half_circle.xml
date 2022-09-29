@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/halfcircle_left_margin">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="oval"
+            android:useLevel="false">
+            <solid android:color="#1B262B" />
+            <size
+                android:width="@dimen/halfcircle_width"
+                android:height="@dimen/halfcircle_height" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/minicontroller_arrow_line_color"/>
+        </shape>
+    </item>
+</layer-list>

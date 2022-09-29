@@ -1,0 +1,29 @@
+R_DEF: Internal format may change without notice
+local
+attr? cursorColor
+attr? cursorWidth
+attr? hideLineWhenFilled
+attr? itemCount
+attr? itemHeight
+attr? itemRadius
+attr? itemSpacing
+attr? itemWidth
+attr? lineColor
+attr? lineWidth
+attr? pinViewStyle
+attr? rtlTextDirection
+attr? state_filled
+attr? viewType
+dimen pv_pin_view_cursor_width
+dimen pv_pin_view_item_line_width
+dimen pv_pin_view_item_radius
+dimen pv_pin_view_item_size
+dimen pv_pin_view_item_spacing
+drawable pv_invisible_image
+id line
+id none
+id rectangle
+style CustomPinWidget
+style CustomPinWidget.CustomPinView
+styleable CustomPinView itemCount itemWidth itemHeight itemRadius itemSpacing lineWidth lineColor viewType android:cursorVisible cursorWidth cursorColor android:itemBackground hideLineWhenFilled state_filled rtlTextDirection
+styleable PinViewTheme pinViewStyle

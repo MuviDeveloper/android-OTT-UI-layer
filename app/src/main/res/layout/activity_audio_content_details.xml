@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/multipart_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/multipart_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/banner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/banner_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imageView_Preorder"
+                            android:layout_width="@dimen/playbtn_width"
+                            android:layout_height="@dimen/playbtn_width"
+                            android:background="@drawable/preorder_bg"
+                            android:src="@drawable/ic_preorder"
+                            app:tint="@color/button_background"
+                            android:layout_centerInParent="true"
+                            android:padding="@dimen/_2sdp"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/textView_PreorderMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:background="@drawable/preorder_msg_bg"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:padding="@dimen/_2sdp"
+                            android:text="Sample preorder live date info"
+                            android:textColor="@color/voucher_inactive_button"
+                            android:textSize="@dimen/preorderbtn_text_size"
+                            android:visibility="gone"/>
+
+
+                    <ImageView
+                            android:id="@+id/overlay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:layout_alignTop="@+id/banner_image"
+                            android:layout_alignBottom="@+id/banner_image"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/gradient_overlay"
+                            android:scaleType="centerCrop" />
+
+
+                    <ImageView
+                            style="?android:borderlessButtonStyle"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_circle"
+                            android:elevation="50dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/play"
+                            android:visibility="gone"
+                            tools:targetApi="lollipop" />
+
+                    <RelativeLayout
+                        android:id="@+id/favorite_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="end">
+
+                        <ImageView
+                            android:id="@+id/share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/payment_relative_margin"
+                            android:layout_marginTop="@dimen/ppv_margin"
+                            android:src="@drawable/category_item_share"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/banner_image"
+                            android:layout_alignParentStart="true"
+                            android:orientation="horizontal">
+
+
+                            <RelativeLayout
+                                android:id="@+id/a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <Button
+                                    android:id="@+id/play_all"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@drawable/custom_button"
+                                    android:text=""
+                                    android:textColor="@color/buttonTextColor"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/albumName_multipart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toStartOf="@+id/play_all"
+                        android:ellipsize="end"
+                        android:textColor="@color/content_name_color"
+                        android:textSize="18sp"
+                        tools:text="" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ppv_margin">
+
+                        <TextView
+                            android:id="@+id/genre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text=""
+                            android:textDirection="locale"
+                            android:textColor="@color/genre_text_color"
+                            android:textSize="@dimen/preorderbtn_text_size"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/follow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/custom_button"
+                            android:drawableStart="@drawable/plus_icon"
+                            android:drawablePadding="-4dp"
+                            android:ellipsize="end"
+                            android:maxWidth="100dp"
+                            android:maxLines="1"
+                            android:paddingStart="4dp"
+                            android:stateListAnimator="@null"
+                            android:text=""
+                            android:textAllCaps="false"
+                            android:textColor="@color/buttonTextColor"
+                            android:textSize="@dimen/viewmore_text_size"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/unfollow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/content_title"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/genre"
+                            android:background="@drawable/custom_button"
+                            android:drawableStart="@drawable/tick_icon"
+                            android:drawablePadding="3dp"
+                            android:ellipsize="end"
+                            android:maxWidth="100dp"
+                            android:maxLines="1"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:stateListAnimator="@null"
+                            android:textAllCaps="false"
+                            android:textColor="@color/buttonTextColor"
+                            android:textSize="@dimen/viewmore_text_size"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/durationcensorLinearlayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="@dimen/ppv_margin"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/SongCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textDirection="locale"
+                            android:textSize="@dimen/vdioduration_text_size"
+                            android:textColor="@color/songcount_text_color" />
+
+                        <View
+                            android:id="@+id/songcount_bar"
+                            android:layout_width="1dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/ppv_margin"
+                            android:background="@color/songcount_text_color"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/video_duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center"
+                            android:layout_marginStart="10dp"
+                            android:text=""
+                            android:textColor="@color/duration_text_color"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/vdioduration_text_size" />
+
+                        <View
+                            android:id="@+id/censor_bar"
+                            android:layout_width="1dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:background="@color/duration_text_color"
+                            android:layout_marginStart="@dimen/ppv_margin"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/videoCensorRatingTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="@dimen/ppv_margin"
+                            android:background="@color/censorRatingBackground"
+                            android:paddingEnd="@dimen/videoCensorRatingTextView_padding"
+                            android:textColor="@color/duration_text_color"
+                            android:textSize="@dimen/vdioduration_text_size"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/videoCensorRatingTextView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="@dimen/name_user_margin_bottom"
+                            android:textColor="@color/duration_text_color"
+                            android:textSize="@dimen/vdioduration_text_size" />
+
+                        <View
+                            android:id="@+id/year_bar"
+                            android:layout_width="1dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/ppv_margin"
+                            android:layout_marginEnd="3dp"
+                            android:background="@color/duration_text_color"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/video_release_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center"
+                            android:text=""
+                            android:layout_marginStart="@dimen/ppv_margin"
+                            android:textColor="@color/duration_text_color"
+                            android:textSize="@dimen/vdioduration_text_size" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/videoStoryTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="@dimen/ppv_margin"
+                    android:ellipsize="end"
+                    android:textColor="@color/vod_story_text_color"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/preorderbtn_text_size" />
+
+                <TextView
+                    android:id="@+id/cast_crew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/videoStoryTextView"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/cast_crew_title_color"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/forgot_text_size"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tracks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:text=""
+                    android:visibility="gone"
+                    android:textDirection="locale"
+                    android:textColor="@color/track_text_color"
+                    android:textSize="@dimen/itemtitle_text_size" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/list_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:scrollbars="none" />
+
+                    <ImageView
+                        android:id="@+id/overlay2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:alpha="0.1"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/viewall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/viewmore_btn_height"
+                        android:layout_below="@+id/list_recyclerView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/ppv_margin"
+                        android:layout_marginEnd="@dimen/ppv_margin"
+                        android:background="@android:color/transparent"
+                        android:stateListAnimator="@null"
+                        android:text="more"
+                        android:textAllCaps="false"
+                        android:textColor="@color/viewall_text_color"
+                        android:textSize="@dimen/preorderbtn_text_size"
+                        android:visibility="gone"
+
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/relatedMovies_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Related Movies"
+                    android:textDirection="locale"
+                    android:textColor="@color/related_content_title_color"
+                    android:textSize="@dimen/itemtitle_text_size"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/related_movie_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="10dp"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/relatedAudio_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Related Audios"
+                    android:textDirection="locale"
+                    android:textColor="@color/related_content_title_color"
+                    android:textSize="@dimen/itemtitle_text_size"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/related_audio_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="10dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/appbarLayout"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center"
+        android:padding="@dimen/main_padding"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/no_internet_image_width"
+            android:layout_height="@dimen/no_internet_image_height"
+            android:layout_above="@id/oopsTextView"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:src="@drawable/nointernet"
+            android:tint="@color/no_internet_image_color" />
+
+        <!--android:textColor="@color/colorPrimary"-->
+        <TextView
+            android:id="@+id/oopsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/noInternetTextView"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:text="Oops!"
+            android:textColor="@color/oops_text_color"
+            android:textSize="@dimen/text_size_oops"
+            android:textStyle="normal" />
+
+        <!--android:textSize="@dimen/testview_text_size"-->
+        <TextView
+            android:id="@+id/noInternetTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btnRetry"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/no_internet_text_color"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+        <!--android:textColor="@color/colorPrimary"-->
+        <Button
+            android:id="@+id/btnRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_bg_transparent"
+            android:gravity="center"
+            android:text="Try Again !"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_retry_text_color"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/appBackgroundColor"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/noDataTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/no_data_text_color"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

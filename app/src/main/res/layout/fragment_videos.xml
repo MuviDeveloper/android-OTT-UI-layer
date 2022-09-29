@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/genre_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/genereTitleTv"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:text=""
+            android:visibility="gone"
+            android:layout_alignParentStart="true"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imagesGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/genre_title"
+        android:layout_above="@id/custom_mini"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/pre_order_button_margin"
+        android:layout_marginRight="@dimen/pre_order_button_margin"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="@dimen/pre_order_button_margin"
+        android:horizontalSpacing="@dimen/horizontal_spacing"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:verticalSpacing="@dimen/vertical_spacing"
+        tools:ignore="NotSibling">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_rawable"
+            android:indeterminateDuration="1000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/transparent"
+        android:padding="@dimen/main_padding"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/no_internet_image_width"
+            android:layout_height="@dimen/no_internet_image_height"
+            android:src="@drawable/nointernet"
+            android:layout_above="@id/oopsTextView"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:tint="@color/no_internet_image_color"
+            />
+
+        <TextView
+            android:id="@+id/oopsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/oops_text_color"
+            android:textSize="@dimen/text_size_oops"
+            android:layout_marginBottom="5dp"
+            android:textStyle="normal"
+            android:layout_above="@id/noInternetTextView"
+            android:text="Oops!"
+            />
+
+        <!--android:textSize="@dimen/testview_text_size"-->
+        <TextView
+            android:id="@+id/noInternetTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/no_internet_text_color"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_above="@id/btnRetry"/>
+
+        <!--android:textColor="@color/colorPrimary"-->
+        <Button
+            android:id="@+id/btnRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_transparent"
+            android:text="Try Again !"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_retry_text_color"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_margin="20dp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:padding="@dimen/main_padding"
+        android:visibility="gone">
+
+        <!--android:textSize="@dimen/testview_text_size"-->
+        <TextView
+            android:id="@+id/noDataTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/no_data_text_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/filterBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/arrowIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="@dimen/arrowIv_margin"
+            android:background="@drawable/filter_arrow" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/demoListView"
+            android:layout_width="@dimen/recylerview_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/arrowIv"
+            android:layout_marginStart="@dimen/profile_image_view_margin_end"
+            android:layout_marginEnd="@dimen/payment_textview_showname_margin"
+            android:gravity="center"
+            android:paddingBottom="@dimen/demoListView_padding" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

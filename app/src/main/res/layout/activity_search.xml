@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imagesGridView"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/pre_order_button_margin"
+        android:horizontalSpacing="@dimen/pre_order_button_margin"
+        android:verticalSpacing="@dimen/pre_order_button_margin"
+        android:listSelector="@color/transparent"/>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_rawable"
+            android:indeterminateDuration="1000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/transparent"
+        android:padding="@dimen/main_padding"
+        android:visibility="gone"
+        android:gravity="center">
+
+
+
+
+        <ImageView
+            android:layout_width="@dimen/no_internet_image_width"
+            android:layout_height="@dimen/no_internet_image_height"
+            android:src="@drawable/nointernet"
+            android:layout_above="@id/oopsTextView"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:tint="@color/no_internet_image_color"
+            />
+
+        <!--android:textColor="@color/colorPrimary"-->
+        <TextView
+            android:id="@+id/oopsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textDirection="locale"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/oops_text_color"
+            android:textSize="@dimen/text_size_oops"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:layout_above="@id/noInternetTextView"
+            android:text="Oops!"
+            />
+
+        <!--android:textSize="@dimen/testview_text_size"-->
+        <TextView
+            android:id="@+id/noInternetTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textDirection="locale"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/no_internet_text_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_above="@id/btnRetry"
+            />
+
+        <!--android:textColor="@color/colorPrimary"-->
+        <Button
+            android:id="@+id/btnRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_transparent"
+            android:text="Try Again !"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_retry_text_color"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_margin="20dp"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/transparent"
+        android:padding="@dimen/main_padding"
+        android:visibility="gone">
+
+        <!--android:textSize="@dimen/testview_text_size"-->
+        <TextView
+            android:id="@+id/noDataTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textDirection="locale"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/no_data_text_color"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

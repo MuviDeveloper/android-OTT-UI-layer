@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/offline_parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/save_continue"
+        android:layout_below="@+id/toolbar">
+
+
+        <ScrollView
+            android:id="@+id/offline_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/content_name_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edittext_rect_background"
+                    android:hint="Content Name"
+                    android:textCursorDrawable="@color/appBackgroundColor"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/upload_content_edittext_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_small" />
+
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_rect_background"
+                    android:gravity="start|top"
+                    android:hint="Story/Description"
+                    android:inputType="textMultiLine"
+                    android:overScrollMode="always"
+                    android:padding="10dp"
+                    android:textCursorDrawable="@color/appBackgroundColor"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/upload_content_edittext_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_small" />
+
+
+                <TextView
+                    android:id="@+id/category_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edittext_rect_background"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text="select Category"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/selected_category_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/offline_category_title_tv"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/selected_category_text_color"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/text_size_small"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/upload_poster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="5dp"
+                        android:text="Upload Poster :"
+                        android:textColor="@color/upload_content_text_color"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <RelativeLayout
+                        android:id="@+id/offline_uploadPoster_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/upload_poster"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/offline_Poster_img"
+                            android:layout_width="@dimen/poster_width"
+                            android:layout_height="@dimen/poster_height"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_poster_img" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/offline_Poster_img"
+                            android:layout_alignStart="@+id/offline_Poster_img"
+                            android:layout_alignEnd="@+id/offline_Poster_img"
+                            android:layout_marginTop="5dp"
+                            android:weightSum="2"
+
+                            >
+
+                            <Button
+                                android:id="@+id/browse_poster"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/viewmore_btn_height"
+                                android:layout_weight="1"
+                                android:background="@drawable/view_more_button_background"
+                                android:text="Browse"
+                                android:textAllCaps="false"
+                                android:textColor="@color/buttonTextColor"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <Button
+                                android:id="@+id/remove_poster"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/viewmore_btn_height"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/browse_button_bg"
+                                android:text="Remove"
+                                android:textAllCaps="false"
+                                android:textColor="@color/buttonTextColor"
+                                android:textSize="@dimen/text_size_small" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/upload_banner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="5dp"
+                        android:text="Upload Banner :"
+                        android:textColor="@color/upload_content_text_color"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <RelativeLayout
+                        android:id="@+id/offline_uploadBannerContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/upload_banner"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/offline_banner_img"
+                            android:layout_width="@dimen/banner_width"
+                            android:layout_height="@dimen/banner_height"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_banner_img" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/offline_banner_img"
+                            android:layout_alignStart="@+id/offline_banner_img"
+                            android:layout_alignEnd="@+id/offline_banner_img"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="20dp"
+                            android:weightSum="2">
+
+                            <Button
+                                android:id="@+id/browse_banner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/viewmore_btn_height"
+                                android:layout_weight="1"
+                                android:background="@drawable/view_more_button_background"
+                                android:text="Browse"
+                                android:textAllCaps="false"
+                                android:textColor="@color/buttonTextColor"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <Button
+                                android:id="@+id/remove_banner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/viewmore_btn_height"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/browse_button_bg"
+                                android:text="Remove"
+                                android:textAllCaps="false"
+                                android:textColor="@color/buttonTextColor"
+                                android:textSize="@dimen/text_size_small" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <!-- <Button
+                     android:id="@+id/offline_save_continue_btn"
+                     android:layout_width="@dimen/save_continue_btn_width"
+                     android:layout_height="@dimen/viewmore_btn_height"
+                     android:background="@drawable/view_more_button_background"
+                     android:padding="5dp"
+                     android:layout_marginTop="@dimen/save_continue_top_margin"
+                     android:layout_marginBottom="10dp"
+                     android:layout_gravity="center_horizontal"
+                     android:gravity="center"
+                     android:text="Save and Continue"
+                     android:textAllCaps="false"
+                     android:textColor="@color/upload_content_text_color"
+                     android:textSize="@dimen/text_size_small" />-->
+                <!-- <RelativeLayout
+                     android:id="@+id/offline_browsecontainer"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="15dp"
+                     android:layout_marginLeft="5dp"
+                     android:visibility="gone">
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Upload Video :"
+                         android:layout_centerInParent="true"
+                         android:id="@+id/offline_upload_video_title_tv"
+                         android:layout_alignParentLeft="true"
+                         android:textSize="@dimen/offline_content_label_txt_size"
+                         android:textColor="@color/upload_content_text_color" />
+
+                     <Button
+                         android:id="@+id/offline_uploadVideoBrowse_btn"
+                         android:layout_width="@dimen/viewmore_btn_width"
+                         android:layout_height="@dimen/viewmore_btn_height"
+                         android:layout_marginLeft="8dp"
+                         android:layout_toRightOf="@+id/offline_upload_video_title_tv"
+                         android:text="Browse"
+                         android:textAllCaps="false"
+                         android:layout_centerInParent="true"
+                         android:textStyle="normal"
+                         android:background="@drawable/browse_button_bg"
+                         android:textColor="@color/offline_content_button_textColor"
+                         android:textSize="@dimen/text_size_small" />
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/video_filename_tv"
+                         android:textColor="@color/upload_content_text_color"
+                         android:padding="5dp"
+                         android:layout_centerInParent="true"
+                         android:layout_toRightOf="@+id/offline_uploadVideoBrowse_btn"/>
+
+                 </RelativeLayout>-->
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/save_continue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/save_continue_btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/button_background"
+        android:text="Save and Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_rawable"
+            android:indeterminateDuration="1000" />
+    </RelativeLayout>
+
+</RelativeLayout>

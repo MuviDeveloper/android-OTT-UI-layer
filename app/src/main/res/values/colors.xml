@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App primary color codes -->
+    <!--These color codes are the primary color codes. for building a new flavour one have to change only these color cods.-->
+
+    <color name="button_play_background">#0cb9f2</color>
+
+    <color name="my_plan_row_bg1_color">#202020</color>
+    <color name="my_plan_row_bg2_color">#111111</color>
+    <color name="my_plan_row_tittle_text_color">#871A1D</color>
+    <color name="my_plan_row_upgradw_text_color">#521115</color>
+    <color name="my_plan_row_text_wite_color">#ffffff</color>
+    <color name="my_plan_row_text_gray_color">#737373</color>
+
+    <color name="aboutustestcolor">@color/appBackgroundColor</color>
+
+    <color name="greybg">#666</color>
+
+    <color name="plan_bg_color">#E6E6E6</color>
+
+    <color name="disable_text_color">#9D9FA2</color>
+    <color name="skip_intro_text_color">#e5e5e5</color>
+    <color name="download_delete_btn_color">#C3292E</color>
+
+    <color name="preorder_bg">#994D4D4D</color>
+
+    <color name="quiz_right">#1BC47D</color>
+    <color name="quiz_wrong">#A94D4D</color>
+    <color name="edittext_bg_gray">#66F1F1F1</color>
+    <color name="minis_tab_bg">#282828</color>
+
+
+    <!-- App primary color codes -->
+    <!--These color codes are the primary color codes. for building a new flavour one have to change only these color cods.-->
+    <color name="colorPrimary">#0cb9f2</color>
+    <color name="colorPrimaryDark">#04a0d3</color>
+    <color name="appBackgroundColor">#000</color><!---for white background : #000 & for black background #fff-->
+    <color name="actionbar_bg_color">@color/colorPrimary</color>
+    <color name="buttonTextColor">#ffffff</color>
+    <color name="button_background">#0cb9f2</color>
+    <color name="text_color">#fff</color><!---for white background : #000 & for black background #fff-->
+
+    <color name="toolbarTitleColor">#fff</color>
+    <!--These color codes are required for new plan page design-->
+    <color name="payment_header_bg_color">#151515</color><!--for white background : appBackgroundColor & for black background:#151515 -->
+    <color name="payment_border_color">@color/payment_header_bg_color</color><!--for white background: button_background & for black background: payment_header_bg_color-->
+    <color name="payment_body_bg_color">#1F1F1F</color><!--for white background : appBackgroundColor & for black background: #1F1F1F-->
+
+    <!-- @Desc: This is used to check the theme and render the colors accordingly in audio player  -->
+    <color name="next_prev_color">#FFF</color><!--for white background : #000 & for black background: #FFF-->
+    <color name="play_pause_color">#FFF</color><!--for white background : #000 & for black background: #FFF-->
+
+    <!--    //************************END**************************//-->
+
+    <!-- App Secondery color codes -->
+    <color name="grey_textColor">#e7dfdf</color>
+    <color name="hint_color">#737373</color>
+    <color name="alreadyMemberTextColor">#757575</color>
+    <color name="no_image_bg_color">#C7BEBE</color>
+    <color name="dark_grey_Color">#999999</color>
+    <color name="episode_background_color">#222222</color>
+    <color name="purchase_history_bg">#E8222222</color>
+    <color name="episodetextcolor">#ffffff</color>
+    <color name="downloadTextColor">#666</color>
+    <color name="pending_text_color">#ff2600</color>
+    <color name="my_plan_row_bg_color">#ffffff</color>
+    <color name="my_plan_row_text_color">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="imeiColor">#FFEB3B</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="editTextColor">@color/text_color</color>
+    <color name="background_start_color">@color/appBackgroundColor</color>
+    <color name="background_end_color">@color/appBackgroundColor</color>
+    <color name="loader_color">@color/button_background</color>
+    <!--    //************************END**************************//-->
+
+
+    <!--no internet color codes-->
+    <color name="no_internet_text_color">@color/text_color</color>
+    <color name="oops_text_color">@color/button_background</color>
+    <color name="no_internet_image_color">#A2A7A2</color>
+    <color name="btn_retry_text_color">@color/button_background</color>
+    <color name="btn_retry_border_color">@color/button_background</color>
+    <!--    //************************END**************************//-->
+    <!--no data color codes-->
+    <color name="no_data_text_color">@color/text_color</color>
+    <!--    //************************END**************************//-->
+
+    <!-- Login Screen  color codes-->
+    <color name="login_forgot_password_color">@color/button_background</color>
+    <color name="or_color">@color/text_color</color>
+    <color name="login_new_user_text_color">@color/alreadyMemberTextColor</color>
+    <color name="sign_up_text_color">@color/button_background</color>
+    <color name="login_google_text_color">@color/buttonTextColor</color>
+    <color name="fb_text_color">@color/buttonTextColor</color>
+    <color name="cross_color">@color/buttonTextColor</color>
+    <!--    //************************END**************************//-->
+
+    <!-- Register Screen  color codes-->
+    <color name="terms_text_view_color">@color/button_background</color>
+    <color name="terms_aggree_text_view_color">@color/alreadyMemberTextColor</color>
+    <color name="register_already_member_color">@color/alreadyMemberTextColor</color>
+    <color name="alreadyHaveALoginButtonTextColor">@color/button_background</color>
+    <!--    //************************END**************************//-->
+
+    <!-- Home Screen  color codes-->
+    <color name="banner_line_color">@color/button_background</color>
+    <color name="content_title_color">@color/white</color>
+    <color name="feature_title_color">@color/text_color</color>
+    <color name="view_all_text_color">@color/button_background</color>
+    <!--    //************************END**************************//-->
+
+    <!-- VOD Details Screen[Single-part/Multi-part] color codes-->
+    <color name="download_progressbar_color">@color/dark_grey_Color</color>
+    <color name="content_name_color">@color/text_color</color>
+    <color name="story_text_color">@color/dark_grey_Color</color>
+    <color name="cast_crew_title_color">@color/button_background</color>
+    <color name="related_content_title_color">@color/text_color</color>
+    <color name="ratingbar_bg_color">@color/button_background</color>
+    <color name="style_circular_color">@color/dark_grey_Color</color>
+    <color name="percentage_text_color">@color/button_background</color>
+    <color name="vod_story_text_color">@color/dark_grey_Color</color>
+    <color name="genre_text_color">@color/dark_grey_Color</color>
+    <color name="duration_text_color">@color/dark_grey_Color</color>
+    <color name="censorRatingBackground">#80000000</color>
+    <color name="censorRatingBackground_white_theme">#1B000000</color>
+    <color name="view_more_text_color">@color/button_background</color>
+    <color name="favorite_selected_color">@color/button_background</color>
+    <color name="favorite_unselected_color">@color/button_background</color>
+    <color name="addReviewColor">@color/button_background</color>
+    <color name="episodes_title_color">@color/text_color</color>
+    <color name="spinner_color">@color/button_background</color>
+    <color name="payment_spinner_color">#e2e1e1</color>
+    <color name="seasonBackgroundColor">#fff</color>
+    <color name="viewall_text_color">@color/button_background</color>
+
+    <color name="view_more_less_text_color">@color/button_background</color>
+
+
+    <!--    //************************END**************************//-->
+    <!-- AOD Details Screen[Single-part/Multi-part] color codes-->
+    <color name="track_text_color">@color/text_color</color>
+    <color name="songcount_text_color">@color/dark_grey_Color</color>
+    <color name="add_to_playlist_text_color">@color/white</color>
+    <color name="add_to_queue_text_color">@color/white</color>
+    <color name="audio_divider_color">#383838</color>
+    <color name="blur">#0c1233</color>
+    <!--    //************************END**************************//-->
+
+
+    <!-- My Upload color codes-->
+    <color name="my_uploads_text_color">@color/text_color</color>
+    <color name="my_uploads_fragment_category_item_ImageView_color">@color/text_color</color>
+    <color name="browse_button_color">@color/dark_grey_Color</color>
+    <color name="upload_content_text_color">@color/text_color</color>
+    <color name="selected_category_text_color">@color/button_background</color>
+    <color name="upload_content_edittext_color">@android:color/black</color>
+    <color name="edit_text_bg_color">#ffffff</color>
+    <!--    //************************END**************************//-->
+
+    <!-- My plans color codes-->
+    <color name="cancel_button_bg_color">#F70707</color>
+    <color name="plan_status_textColor">#4CAF50</color>
+    <color name="cancel_subscription_edit_text_color">@android:color/black</color>
+    <!--    //************************END**************************//-->
+
+    <!-- PurchaseHistory color codes-->
+    <color name="purchase_history_bg_color">#30333c</color>
+
+    <!-- Followings color codes-->
+    <color name="follow_bg_color">@color/episode_background_color</color>
+    <color name="follow_text_color">@color/white</color>
+    <color name="no_of_followings_text_color">@color/dark_grey_Color</color>
+    <color name="follow_tab_text_color">#000000</color>
+
+    <!--    //************************END**************************//-->
+    <!-- Settings color codes-->
+    <color name="settings_text_color">@color/text_color</color>
+    <color name="settings_manange_text_color">@color/dark_grey_Color</color>
+    <color name="settings_divider">@color/colorPrimaryDark</color>
+    <color name="layout_overlay_color">#ba6a6c6a</color>
+    <color name="manange_device_os_text_color">@color/dark_grey_Color</color>
+    <color name="manange_device_deregister_text_color">@color/button_background</color>
+    <color name="profile_name_text_color">@color/grey_textColor</color>
+    <color name="languageTextColor">@color/text_color</color>
+    <color name="about_us_bg_color">@color/appBackgroundColor</color>
+    <color name="subtitle_bg">#63000000</color>
+    <color name="aboutustextcolor">@color/text_color</color>
+    <!--    //************************END**************************//-->
+    <!-- filter screen color codes-->
+    <color name="filterTextColor">@color/text_color</color>
+    <!-- nnotification screen color codes-->
+    <color name="notification_text_color">@color/text_color</color>
+
+    <!--Following color code is used for custom minicontroller-->
+    <color name="chromecast_progress_color">@color/button_background</color>
+    <color name="chromecast_progress_buffer_color">#45565E</color>
+    <color name="minicontroller_backgroung_color">#30ffffff</color>
+    <color name="minicontroller_arrow_line_color">@color/hint_color</color>
+    <color name="minicontroller_icon_color">#ffffff</color>
+    <color name="minicontroller_controller_text_color">#ffffff</color>
+    <color name="chromecast_overlaycolor">@color/colorPrimaryDark</color>
+    <color name="resumeTitleTextColor">#ffffff</color>
+    <color name="mediaroute_btn_color">#ffffff</color>
+    <color name="expanded_controller_text_color">#ffffff</color>
+
+    <!--Following color code is used for Subscription plans-->
+    <color name="currency_color">#000000</color>
+    <color name="plan_select_color">@color/button_background</color>
+    <color name="plan_unselect_bg_color">#A8A8A8</color>
+    <color name="plan_text_color">#f5f4f4</color>
+    <color name="success_text_color">#669900</color>
+    <!--Following color code is used for Cast and Crew page-->
+    <color name="cast_text_color">@color/button_background</color>
+    <color name="cast_description_color">@color/text_color</color>
+
+    <!--Following color code is used for Navigation Drawer-->
+    <color name="nav_header_line_color">@color/colorPrimaryDark</color>
+    <color name="drawer_bg_color">#fff</color>
+    <color name="drawer_divider_color">@color/appBackgroundColor</color>
+    <color name="nav_text_line_color">@color/dark_grey_Color</color> <!--#000000 @author:Debashish -->
+    <color name="nav_drawer_text_Color">#666</color>
+    <color name="nav_logo_bg_color">@color/button_background</color>
+    <color name="nav_item_text_color">@color/text_color</color>
+
+
+
+    <color name="contact_us_title_color">@color/button_background</color>
+
+    <!--Following color code is used for search-->
+    <color name="search_edit_color">#00FFFFFF</color>
+    <color name="search_hint_color">#dadada</color>
+    <color name="search_text_color">@color/white</color>
+    <color name="search_close_color">@color/search_text_color</color>
+
+    <!--GoLiveActivity-->
+    <color name="go_live_activity_textColor">#fff</color>
+
+    <!--CameraActivity-->
+    <color name="offline_content_button_textColor">#000000</color><!--button-->
+    <!--My uploads listing page-->
+    <color name="live_button_bg_color">#9b9b9b</color>
+    <color name="poster_img_bg_color">#d9d9d9</color>
+    <color name="change_video_text_color">#696969</color>
+
+
+    <!--Player color code-->
+    <color name="playlist_textColor">@color/white</color>
+    <color name="playerBgColor">#000000</color>
+    <color name="player_title_color">@color/white</color>
+    <color name="player_textColor">@color/white</color>
+    <color name="waterMarkTextColor">#80ffffff</color>
+    <!--added for subtitle color by anu-->
+    <color name="subtitle_solid_color">@color/white</color>
+    <color name="subtitle_outline_color">@color/white</color>
+
+    <!--added for app pop up dialog-->
+    <color name="alertPopupColor">#fff</color>
+    <color name="pop_up_text_color">#000000</color>
+    <!--    //************************END**************************//-->
+
+
+    <!-- Other color code-->
+    <color name="grey_bg_color">#878282</color>
+    <color name="notification_color">#FF0000</color>
+    <color name="register_login_stuffpix">#37BB7E</color>
+    <color name="voucher_inactive_button">@color/grey_textColor</color>
+    <color name="selected_color">#000</color>
+    <color name="unselected_color">#fff</color>
+    <color name="check_box_default_color">#5c6873</color>
+    <color name="languagePopupColor">#000000</color>
+    <color name="languagePopupBackgroundColor">#50696969</color>
+    <color name="languagePopupViewBackgroundColor">#b70000</color>
+    <color name="colorAccent">#3b5998</color>
+    <color name="textColorPrimary">@color/colorAccent</color>
+    <color name="windowBackground">#fff</color>
+
+    <!--    //************************END**************************//-->
+    <color name="buttonSheetBackground">#1F1E1E</color>
+
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardview_dark_background"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/addUgcLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/addImg1"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignTop="@+id/add_ugc"
+            android:layout_alignBottom="@+id/add_ugc"
+
+            android:src="@drawable/ic_add" />
+        <TextView
+            android:id="@+id/add_ugc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+
+            android:layout_toEndOf="@+id/addImg1"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+
+            style="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            android:text="New UGC" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#605F5F"
+        android:id="@+id/addView"
+        />
+    <RelativeLayout
+        android:id="@+id/addMinisLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <ImageView
+            android:id="@+id/addImg2"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignBottom="@+id/add_minis"
+            android:layout_alignTop="@+id/add_minis"
+            android:src="@drawable/ic_add" />
+        <TextView
+            android:id="@+id/add_minis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:padding="5dp"
+
+            android:layout_centerVertical="true"
+
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_toEndOf="@+id/addImg2"
+            android:layout_marginLeft="5dp"
+            android:text="New Minis" />
+    </RelativeLayout>
+
+</LinearLayout>

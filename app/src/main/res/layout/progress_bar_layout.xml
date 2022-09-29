@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loadingPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="@color/transparent"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <ProgressBar
+        style= "?android:attr/indeterminateProgressStyle"
+        android:foregroundGravity="center"
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/large_progress_bar"
+        android:indeterminateDuration="1000" />
+
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/app_background"
+    tools:context=".ui.activity.SettingsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <!--  <RelativeLayout
+          android:id="@+id/noInternet"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/transparent"
+          android:padding="@dimen/main_padding"
+          android:visibility="gone"
+          android:layout_margin="@dimen/no_internet_margin"
+          android:layout_centerInParent="true"
+          android:layout_above="@+id/noData">
+
+          <LinearLayout
+              android:layout_centerInParent="true"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center">
+
+              <ImageView
+                  android:id="@+id/noInternet_image"
+                  android:layout_width="@dimen/no_internet_image_width"
+                  android:layout_height="@dimen/no_internet_image_height"
+                  android:src="@drawable/nointernet"
+                  android:layout_above="@id/oopsTextView"
+                  android:layout_centerInParent="true"
+                  android:gravity="center"
+
+                  />
+
+              <TextView
+                  android:id="@+id/oopsTextView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:gravity="center"
+                  android:maxLines="4"
+                  android:singleLine="false"
+                  android:textColor="@color/colorPrimary"
+                  android:textSize="@dimen/text_size_oops"
+                  android:layout_marginBottom="5dp"
+                  android:textStyle="normal"
+                  android:layout_above="@id/noInternetTextView"
+                  android:text="Oops!"
+                  />
+
+              &lt;!&ndash;android:textSize="@dimen/testview_text_size"&ndash;&gt;
+              <TextView
+                  android:id="@+id/noInternetTextView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:maxLines="4"
+                  android:singleLine="false"
+                  android:textColor="@color/noInternetColor"
+                  android:textSize="15sp"
+                  android:textStyle="normal"
+                  />
+
+              <Button
+                  android:id="@+id/btnRetry"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/button_bg_transparent"
+                  android:text="Try Again !"
+                  android:textAllCaps="false"
+                  android:textColor="@color/colorPrimary"
+                  android:layout_centerInParent="true"
+                  android:gravity="center"
+                  android:layout_margin="20dp"
+                  />
+          </LinearLayout>
+
+
+
+      </RelativeLayout>
+  -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutAlwaysPlayBestResolution"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_section_height"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_ten_dp">
+
+                <TextView
+                    android:id="@+id/best_resolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Always Play Best Resolution"
+                    android:textColor="@color/settings_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textDirection="locale"
+                    android:maxEms="8"
+                    android:gravity="center|start"
+                    android:layout_weight="1"
+                    />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/resolution_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/marginleft10dp"
+
+
+
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/lineUnderAlwaysPlayBestResolution"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/settings_divider"
+                android:layout_marginStart="@dimen/marginleft10dp"
+                android:layout_marginEnd="@dimen/marginright10dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/layoutNotifyWhenStreamingOnMobileData"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="@dimen/settings_section_height"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/margin_ten_dp">
+
+                <TextView
+                    android:id="@+id/notify_mobile_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notify When Streaming On Mobile Data"
+                    android:textColor="@color/settings_text_color"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textDirection="locale"
+                    android:layout_weight="1"
+                    android:maxEms="8"
+                    />
+                <!--
+                                android:background="@null"
+                                android:button="@drawable/custom_switch"
+                                android:thumb="@null"
+                                app:track="@null"-->
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/mobile_data_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginleft10dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
