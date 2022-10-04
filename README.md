@@ -8,7 +8,9 @@ Apps SDK by Muvi provides you access to the UI layer of the application
 # Project Description
 As a developer, we always want to customize the UI aesthetics of our applications. With Muvi’s App SDK you can customize your application and build a powerful OTT application in hours 
 
-# Technologies used behind the project:Java for android 
+# Technologies used behind the project
+Java: for android 
+
 Use our API SDK to integrate 500+ features into your application
 
 # How to use the project
